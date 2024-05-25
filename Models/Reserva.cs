@@ -34,8 +34,13 @@ namespace DesafioProjetoHospedagem.Models
 
         public void DescontoValor()
         {
-            Console.WriteLine($"Desconto de 10% sobre o valor total { valorTotal() }. Pois a reserva foi igual/acima de 10 dias ");
-            Console.WriteLine("------------------------------------");
+            bool totalDiasReservados = DiasReservados >= 10;
+
+            if (totalDiasReservados)
+            {
+                Console.WriteLine($"Desconto de 10% sobre o valor total {valorTotal()}. Pois a reserva foi igual/acima de 10 dias ");
+                Console.WriteLine("------------------------------------"); 
+            }
         }
 
         public void CadastrarHospedes(List<Pessoa> hospedes)
